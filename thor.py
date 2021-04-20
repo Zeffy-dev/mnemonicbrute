@@ -2,8 +2,8 @@ from thor_devkit.cry import mnemonic
 from thor_devkit import cry
 from thor_devkit.cry import hdnode
 
-words = 'sausage bracket staff noodle comic enjoy bag install will'
-address = '0xfecca323e9c2caf3851403e6cfafe7aa81996b05'
+words = 'biscuit cracker staff random comic enjoy bag install white'
+address = '0xabcda323e9c2caf3851403e6cfafe7aa81996b04'
 word10 = ''
 word11 = ''
 word12 = ''
