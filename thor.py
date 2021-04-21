@@ -2,7 +2,7 @@ from thor_devkit.cry import mnemonic
 from thor_devkit import cry
 from thor_devkit.cry import hdnode
 
-words = 'biscuit cracker staff random comic enjoy bag install white'
+words = 'sausage bracket staff noodle comic enjoy bag install will'
 address = '0xabcda323e9c2caf3851403e6cfafe7aa81996b04'
 word10 = ''
 word11 = ''
@@ -25,8 +25,8 @@ for line in WordlistOne:
         if(done == True):
             break;
         counter=counter+1
-        print('Percent Complete: ' + str(counter * 100/totalCount))
-        #print('Trying Word#:' + str(counter) + ' ' + line)
+        #print('Percent Complete: ' + str(counter * 100/totalCount))
+        #print('Trying Word#:' + ' ' + i + ' ' + j + ' ' + k)
         for line3 in WordlistThree:
             i = line.strip()
             j = line2.strip()
@@ -36,12 +36,13 @@ for line in WordlistOne:
             flag = mnemonic.validate(words2)
             
             if(flag == True):
-                #print('Trying Word#:' + ' ' + i + ' ' + j + ' ' + k)
+                print('Trying Word#:' + ' ' + i + ' ' + j + ' ' + k)
                 
                 hd_node = cry.HDNode.from_mnemonic(
                         words2,
                         init_path=hdnode.VET_EXTERNAL_PATH
                         )
+                
                 addr = '0x'+hd_node.derive(0).address().hex()
                 if(addr == address):
                     word10 = i
